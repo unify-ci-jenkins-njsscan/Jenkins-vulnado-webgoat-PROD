@@ -7,9 +7,9 @@ pipeline {
         OUTPUT_SARIF = 'findsecbugs-report.sarif'
         TARGET_JAR   = 'vulnearblesqlapp-0.0.1-SNAPSHOT.jar'
     }
-    // triggers {
-    //     cron '15 01 * * 1-5'
-    // }
+    triggers {
+        cron '15 01 * * 1-5'
+    }
 
     stages {
         stage('Run SpotBugs + FindSecBugs') {
